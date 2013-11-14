@@ -1,0 +1,8 @@
+  {
+    "name": "plukkliste",
+    "dependencies": {
+      "express": "*",
+      "ejs": "*",
+      "express-ejs-layouts": "*"
+    }
+  }
