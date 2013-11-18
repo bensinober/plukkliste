@@ -1,15 +1,52 @@
 <div id="content-top">
-  <ul>
-    <% books.forEach(function(book) { %>
-      <li>tittel: <%= book.title %>
-        isbn: <%= book.isbn %>
-      </li>
-    <% }); %>
-  </ul>
+  <table id="holdstable" class="tablesorter" >
+    <thead>
+      <tr>
+        <!-- <th>hyllesign</th> -->
+        <th>lokasjon</th>
+        <th>materialtype</th>
+        <th>forfatter</th>
+        <th>tittel</th>
+        <th>eks</th>
+        <th>år</th>
+        <th>tnr</th>
+        <th>lnr</th>
+        <th>res.dato</th>
+        <th>henteavd</th>
+        <th>Hentes av</th>
+        <th>Funnet</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% books.forEach(function(hold, index, array) { %>
+        <tr id="<%=index%>">
+          <!-- <td><%= hold.itemcallnumber %></td> -->
+          <td><%= hold.location %></td>
+          <td><%= hold.itype %></td>
+          <td><%= hold.author ? hold.author : '' %></td>
+          <td><%= hold.title %></td>
+          <td><%= hold.copynumber %></td>
+          <td><%= hold.copyrightdate %></td>
+          <td><%= hold.itemnumber %></td>
+          <td><%= hold.cardnumber %></td>
+          <td><%= hold.reservedate %></td>
+          <td><%= hold.pickbranch %></td>
+          <td>Kayser Söze</td>
+          <td>
+            <% if (hold.found) { %> 
+              <button id="star" class="found"><img src="img/star_orange.png"/></button> 
+            <% } else { %>
+              <button id="star" class="unfound"><img src="img/star_gray.png"/></button>
+            <% } %>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
 </div>
-<div id="content-middle">
+<!-- <div id="content-middle">
   midtinnhold her ja
 </div>
 <div id="content-bottom">
   bunninnhold her ja
-</div>
+</div> -->

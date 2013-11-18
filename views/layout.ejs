@@ -4,14 +4,24 @@
     <meta charset="utf-8" />
     <title>Plukkliste Deichman</title>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <script src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() { 
+        $("#holdstable").tablesorter();
+
+        foundBook = function(rowid) {
+          $('tr id').append('<p>' + message + '</p>');
+        } 
+
+      }); 
+    </script>
   </head>
 
   <body>
     <div id="container">
       <div id="header">
         <a href="/"><img class="logo" src="/img/logo.png" /></a>
-        <a href="/"><p>Plukk bøker - eller dø!</p></a>
         <div id="debug"></div>
       </div>
     

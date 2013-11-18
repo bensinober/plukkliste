@@ -3,6 +3,7 @@
     "dependencies": {
       "express": "*",
       "ejs": "*",
-      "express-ejs-layouts": "*"
+      "express-ejs-layouts": "*",
+      "tablesort": "*"
     }
   }
