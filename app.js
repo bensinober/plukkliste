@@ -49,6 +49,7 @@ app.locals({session: session, env: app.get('env')});
 var routes = require('./routes');    // automatically requires 'routes/index.js'
 
 app.get('/', routes.index);
+app.put('/foundBook/:biblionumber/:itemnumber/:borrowernumber', routes.foundBook);
 
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));

@@ -67,3 +67,6 @@ table.tablesorter .headerSortDown {
     background-image: url(desc.png);
     background-repeat: no-repeat;
 }
+
+a.found { display:block;width:40px;height:40px; background-image: url(/img/star_whole_orange.png); background-repeat: no-repeat; }
+a.unfound { display:block;width:40px;height:40px; background-image: url(/img/star_gray.png); background-repeat: no-repeat; }

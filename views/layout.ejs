@@ -10,9 +10,39 @@
       $(document).ready(function() { 
         $("#holdstable").tablesorter();
 
-        foundBook = function(rowid) {
-          $('tr id').append('<p>' + message + '</p>');
+        foundBook = function(rowid, biblionumber, itemnumber, borrowernumber) {
+          // console.log(rowid);
+          // console.log(biblionumber);
+          // console.log(itemnumber);
+          // console.log(borrowernumber);
+          var request = $.ajax({
+            url: '/foundBook/'+biblionumber+'/'+itemnumber+'/'+borrowernumber, 
+            type: 'PUT',
+            cache: false,
+            success: function(data) {
+              console.log(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              console.log(jqXHR.responseText);
+            }
+          });
+
         } 
+        
+        $('#star').live('click', function () {
+            var row = $(this).closest('tr');
+            var rowid  = row.attr('id');
+            var biblionumber = row.find('.biblionumber').text();
+            var itemnumber = row.find('.itemnumber').text();
+            var borrowernumber = row.find('.borrowernumber').text();
+
+            if ($(this).hasClass('unfound')) {
+              $(this).removeClass('unfound').addClass('found');
+              foundBook(rowid, biblionumber, itemnumber, borrowernumber);
+            } else {
+              $(this).removeClass('found').addClass('unfound');
+            }
+        });
 
       }); 
     </script>

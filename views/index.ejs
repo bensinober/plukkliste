@@ -7,8 +7,9 @@
         <th>materialtype</th>
         <th>forfatter</th>
         <th>tittel</th>
-        <th>eks</th>
+        <th>strekkode</th>
         <th>år</th>
+        <th hidden="true">bnr</th>
         <th>tnr</th>
         <th>lnr</th>
         <th>res.dato</th>
@@ -25,18 +26,19 @@
           <td><%= hold.itype %></td>
           <td><%= hold.author ? hold.author : '' %></td>
           <td><%= hold.title %></td>
-          <td><%= hold.copynumber %></td>
+          <td><%= hold.barcode %></td>
           <td><%= hold.copyrightdate %></td>
-          <td><%= hold.itemnumber %></td>
-          <td><%= hold.cardnumber %></td>
+          <td class="biblionumber" hidden="true"><%= hold.biblionumber %></td>
+          <td class="itemnumber"><%= hold.itemnumber %></td>
+          <td class="borrowernumber"><%= hold.borrowernumber %></td>
           <td><%= hold.reservedate %></td>
           <td><%= hold.pickbranch %></td>
           <td>Kayser Söze</td>
           <td>
             <% if (hold.found) { %> 
-              <button id="star" class="found"><img src="img/star_orange.png"/></button> 
+              <a href="#" class="found" id="star" ></a>
             <% } else { %>
-              <button id="star" class="unfound"><img src="img/star_gray.png"/></button>
+              <a href="#" class="unfound" id="star" ></a>
             <% } %>
           </td>
         </tr>
