@@ -4,17 +4,17 @@
     <thead>
       <tr>
         <!-- <th>hyllesign</th> -->
-        <th>lokasjon</th>
-        <th>materialtype</th>
+        <th>lok</th>
+        <th>type</th>
+        <th>år</th>
+        <th>res.dato</th>
+        <th>avd</th>
         <th>forfatter</th>
         <th>tittel</th>
         <th>strekkode</th>
-        <th>år</th>
         <th hidden="true">bnr</th>
         <th>tnr</th>
         <th>lnr</th>
-        <th>res.dato</th>
-        <th>henteavd</th>
         <th>Hentes av</th>
         <th>Funnet</th>
       </tr>
@@ -25,15 +25,15 @@
           <!-- <td><%= hold.itemcallnumber %></td> -->
           <td><%= hold.location %></td>
           <td><%= hold.itype %></td>
+          <td><%= hold.copyrightdate %></td>
+          <td><%= hold.reservedate %></td>
+          <td><%= hold.pickbranch %></td>
           <td><%= hold.author ? hold.author : '' %></td>
           <td><%= hold.title %></td>
           <td><%= hold.barcode %></td>
-          <td><%= hold.copyrightdate %></td>
           <td class="biblionumber" hidden="true"><%= hold.biblionumber %></td>
           <td class="itemnumber"><%= hold.itemnumber %></td>
           <td class="borrowernumber"><%= hold.borrowernumber %></td>
-          <td><%= hold.reservedate %></td>
-          <td><%= hold.pickbranch %></td>
           <td>Keyser Söze</td>
           <td>
             <% if (hold.found) { %> 
