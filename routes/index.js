@@ -38,11 +38,12 @@ module.exports.foundBook = function(req, res){
       "/found_book", function(err, response, body) {
     if (!err && response.statusCode == 200) {
       var json = JSON.parse(body);
+      console.log("response"+json)
       res.json(json);
     } else if (!err) {
-      console.log(err);
+      console.log("error" +err);
     } else {
-      console.log(body);
+      console.log("body" +body);
     }
 
   });
