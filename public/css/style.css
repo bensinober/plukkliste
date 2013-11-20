@@ -3,7 +3,7 @@
                     -o-user-select: none;  user-select: none; }
 button::-moz-focus-inner { border: 0; }
 
-body               { font-family: Arial, sans-serif; font-size:100%; overflow:hidden}
+body               { font-family: Arial, sans-serif; font-size:100%; overflow:auto}
 h2                 { font-size: 2em; color: #222; letter-spacing: 2px; line-height: 1.1em;}
 hr                 { border: 1px solid gray; width: 91%; margin-top: 20px; margin-bottom: 20px;}
 a:link             { text-decoration: none; color: #4099FF;}}
@@ -11,7 +11,8 @@ a:visited          { color: #4099FF;}}
 a:active, a:focus  { outline-style: none; outline: 0; }
 
 div#header         { height: 150px; width: 100%; background: #4099FF; 
-                     background-image: url(http://www.counterthreat.com/wp-content/uploads/2011/06/books-header.jpg); 
+                     /*background-image: url(http://www.counterthreat.com/wp-content/uploads/2011/06/books-header.jpg); */
+                     background-image: url(/img/magazine.jpg); 
                      background-repeat: no-repeat;}
    #header p       { font-family: Impact, sans-serif; font-size:3em; color: #fff; padding: 50px 0 0 500px; float:;}
 img.logo           { float:right; }
@@ -68,5 +69,5 @@ table.tablesorter .headerSortDown {
     background-repeat: no-repeat;
 }
 
-a.found { display:block;width:40px;height:40px; background-image: url(/img/star_whole_orange.png); background-repeat: no-repeat; }
-a.unfound { display:block;width:40px;height:40px; background-image: url(/img/star_gray.png); background-repeat: no-repeat; }
+a.found { display:block;width:25px;height:25px; background-image: url(/img/star_whole_orange.png); background-repeat: no-repeat; }
+a.unfound { display:block;width:25px;height:25px; background-image: url(/img/star_gray.png); background-repeat: no-repeat; }

@@ -3,7 +3,7 @@
   <table id="holdstable" class="tablesorter" >
     <thead>
       <tr>
-        <!-- <th>hyllesign</th> -->
+        <th>hyllesign</th>
         <th>lok</th>
         <th>type</th>
         <th>år</th>
@@ -15,14 +15,14 @@
         <th hidden="true">bnr</th>
         <th>tnr</th>
         <th>lnr</th>
-        <th>Hentes av</th>
+        <th>Hvem<br/>henter</th>
         <th>Funnet</th>
       </tr>
     </thead>
     <tbody>
       <% books.forEach(function(hold, index, array) { %>
-        <tr id="<%=index%>">
-          <!-- <td><%= hold.itemcallnumber %></td> -->
+        <tr id="row<%=index%>">
+          <td><%= hold.itemcallnumber ? hold.itemcallnumber : '' %></td>
           <td><%= hold.location %></td>
           <td><%= hold.itype %></td>
           <td><%= hold.copyrightdate %></td>
@@ -34,7 +34,7 @@
           <td class="biblionumber" hidden="true"><%= hold.biblionumber %></td>
           <td class="itemnumber"><%= hold.itemnumber %></td>
           <td class="borrowernumber"><%= hold.borrowernumber %></td>
-          <td>Keyser Söze</td>
+          <td>Liv</td>
           <td>
             <% if (hold.found) { %> 
               <a href="#" class="found" id="star" ></a>
