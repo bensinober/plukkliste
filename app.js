@@ -9,8 +9,9 @@ var http = require('http');
 var path = require('path');
 
 /**
- * Instantiate Rfid reader and load Book class
+ * Config
  */
+
 
 /**
  * Environment

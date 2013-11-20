@@ -3,11 +3,12 @@
  * GET home page.
  */
 var request = require("request");
+var config = require('../config/settings.json');
 
 module.exports.index = function(req, res){
 
 
-  var holdsrequest = request.get("http://localhost:8080/cgi-bin/koha/rest.pl/holds/all", function(err, response, body) {
+  var holdsrequest = request.get(config.opac+"/cgi-bin/koha/rest.pl/holds/all", function(err, response, body) {
     console.log(req.params)
     if (!err && response.statusCode == 200) {
       var json = JSON.parse(body);
@@ -30,7 +31,7 @@ module.exports.foundBook = function(req, res){
   //   method: 'PUT'
   // };
 
-  var bookrequest = request.put("http://localhost:8080/cgi-bin/koha/rest.pl/holds/"+
+  var bookrequest = request.put(config.opac+"/cgi-bin/koha/rest.pl/holds/"+
       req.params.biblionumber+"/"+
       req.params.itemnumber+"/"+
       req.params.borrowernumber+
