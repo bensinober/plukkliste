@@ -3,13 +3,13 @@
   <table id="holdstable" class="tablesorter" >
     <thead>
       <tr>
-        <th>hyllesign</th>
+        <th>sign</th>
         <th>lok</th>
-        <th>type</th>
+        <!--<th>type</th>-->
         <th>år</th>
         <th>res.dato</th>
         <th>avd</th>
-        <th>forfatter</th>
+        <th>forf</th>
         <th>tittel</th>
         <th>strekkode</th>
         <th hidden="true">bnr</th>
@@ -24,9 +24,9 @@
         <tr id="row<%=index%>">
           <td><%= hold.itemcallnumber ? hold.itemcallnumber : '' %></td>
           <td><%= hold.location %></td>
-          <td><%= hold.itype %></td>
+          <!--<td><%= hold.itype %></td>-->
           <td><%= hold.copyrightdate %></td>
-          <td><%= hold.reservedate %></td>
+          <td><%= hold.reservedate ? hold.reservedate : '' %></td>
           <td><%= hold.pickbranch %></td>
           <td><%= hold.author ? hold.author : '' %></td>
           <td><%= hold.title %></td>

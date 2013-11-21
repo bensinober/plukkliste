@@ -1,3 +1,4 @@
 {
-  "opac": "http://localhost:8080"
+  "opac_host": "localhost",
+  "opac_port": 8080
 }
