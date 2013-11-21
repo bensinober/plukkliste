@@ -1,5 +1,5 @@
 <div id="content-top">
-  <h3>Plukkliste Deichman Hovedbiblioteket</h3>
+  <h3>Plukkliste Deichman</h3>
   <table id="holdstable" class="tablesorter" >
     <thead>
       <tr>
@@ -25,7 +25,7 @@
           <td><%= hold.itemcallnumber ? hold.itemcallnumber : '' %></td>
           <td><%= hold.location %></td>
           <!--<td><%= hold.itype %></td>-->
-          <td><%= hold.copyrightdate %></td>
+          <td><%= hold.copyrightdate ? hold.copyrightdate : '' %></td>
           <td><%= hold.reservedate ? hold.reservedate : '' %></td>
           <td><%= hold.pickbranch %></td>
           <td><%= hold.author ? hold.author : '' %></td>
